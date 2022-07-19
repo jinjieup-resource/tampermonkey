@@ -1,21 +1,23 @@
 // ==UserScript==
 // @name         youtube downloader (use y2mate)
 // @namespace    https://github.com/jinjieup-resource/tempermonkey
-// @version      0.1.1
+// @version      0.1.2
 // @description  use y2mate.is to download youtube videos
 // @author       jinjieup-resource
 // @license      MIT
 // @match        https://www.youtube.com/watch?v=*
 // @match        https://*.y2mate.is/*
-// @require      https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js
-// @grant GM_setValue
-// @grant GM_getValue
-// @grant GM_setClipboard
-// @grant GM_log
-// @grant GM_xmlhttpRequest
-// @grant unsafeWindow
-// @grant window.close
-// @grant window.focus
+// @require           https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js
+// @grant             unsafeWindow
+// @grant             GM_openInTab
+// @grant             GM.openInTab
+// @grant             GM_getValue
+// @grant             GM.getValue
+// @grant             GM_setValue
+// @grant             GM.setValue
+// @grant             GM_xmlhttpRequest
+// @grant             GM.xmlHttpRequest
+// @grant             GM_registerMenuCommand
 // @updateURL https://raw.githubusercontent.com/jinjieup-resource/tempermonkey/main/youtube.js
 // ==/UserScript==
 (function () {
