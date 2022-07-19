@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         youtube downloader (use y2mate)
 // @namespace    https://github.com/jinjieup-resource/tempermonkey
-// @version      0.1.3
+// @version      0.1.4
 // @description  use y2mate.is to download youtube videos
 // @author       jinjieup-resource
 // @license      MIT
@@ -28,7 +28,7 @@
     var url = window.location.href;
     // 创建一个红色的长方形按钮
     var button = document.createElement("button");
-    button.innerHTML = "下载";
+    button.title = "下载";
     button.style.backgroundColor = "red";
     button.style.color = "white";
     button.style.border = "none";
