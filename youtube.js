@@ -23,7 +23,7 @@
 // ==/UserScript==
 (function () {
   "use strict";
-  if (window.location.href.indexOf("watch?v=") > -1) {
+  if (window.location.href.indexOf("watch?v=") != -1) {
     // 获取当前页链接
     var url = window.location.href;
     // 创建一个红色的长方形按钮
