@@ -18,55 +18,25 @@
 // @grant window.focus
 // @updateURL https://raw.githubusercontent.com/jinjieup-resource/tempermonkey/main/youtube.js
 // ==/UserScript==
-(function() {
-  'use strict';
+(function () {
+  "use strict";
   if (window.location.href.indexOf("watch?v=") > -1) {
-    // var button = document.createElement("button"); //创建一个按钮
-    // button.textContent = "下载Video"; //按钮内容
-    // button.style.width = "50px"; //按钮宽度
-    // button.style.height = "2.8rem"; //按钮高度
-    // button.style.align = "center"; //文本居中
-    // button.style.color = "white"; //按钮文字颜色
-    // button.style.background = "#e33e33"; //按钮底色
-    // button.style.border = "1px solid #e33e33"; //边框属性
-    // button.style.borderRadius = "4px"; //按钮四个角弧度
-    var buttonDiv = document.createElement("span");
-    buttonDiv.id = "punisher";
-    buttonDiv.style.width = "100%";
-    buttonDiv.style.marginTop = "3px";
-    buttonDiv.style.padding = "10px 0";
-    var addButton = document.createElement("a");
-    addButton.appendChild(document.createTextNode("下载视频"));
-    addButton.style.width = "100%";
-    addButton.style.cursor = "pointer";
-    addButton.style.height = "inherit";
-    addButton.style.backgroundColor = "#393939";
-    addButton.style.color = "#ffffff";
-    addButton.style.padding = "10px 22px";
-    addButton.style.margin = "0px 0px";
-    addButton.style.border = "0";
-    addButton.style.borderRadius = "2px";
-    addButton.style.fontSize = "1.4rem";
-    addButton.style.fontFamily = "inherit";
-    addButton.style.textAlign = "center";
-    addButton.style.textDecoration = "none";
-    addButton.href = "//yt1s.com/en/youtube-to-mp3?q=" + encodeURIComponent(location.href);
-    addButton.target = "_blank";
-    buttonDiv.appendChild(addButton);
-    var targetElement = document.querySelectorAll("[id='subscribe-button']");
-    buttonDiv.addEventListener("click", clickBotton) //监听按钮点击事件
-    var video_id = window.location.href.split("watch?v=")[1]; //获取视频id
-    var video_url = "https://www.youtube.com/watch?v=" + video_id; //视频链接
-    function clickBotton(){
-      window.open("https://y2mate.is/", "_blank"); //新窗口打开y2mate.is
-      setTimeout(function(){
-        var input = document.querySelector("#txtUrl"); //获取输入框
-        input.value = video_url; //输入视频链接
-        var btn = document.querySelector("#btnSubmit"); //获取提交按钮
-        btn.click(); //点击提交按钮
-      } ,100);
-    }
-    var bar = document.getElementsById("title"); //获取标题栏
-    bar.appendChild(button); //按钮添加到页面
+    var iconVideo =
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADOUlEQVRoQ+2Zz4uNURjHP9+F8g8gykKJNJMUUmzMDKZmYVYsLBRhOaEmFhRRLCZDY4PBrJRREkUMmY3URCk/s6GMhR9ZWNk9OvXO7b133ve+57w/7szUnLqbe59fn/Oc85znnCvm+NAcj595gHgGzWwDsBZYDawEFgI/gT/AR0nDZWe8lAyYWTewF9iTEeA4MCTpblkghQHM7BxwPDCgAUn9gTqJ4oUAzOwKcChnICOS9uXUranlBjCza8CBggFclHSkiI1cAGbWBTwt4jim2y3pSV5bwQBmtgq4BazP67RB7w3gsvAX+CbpV4hdL4CoPG4H3KcjxEEOWVdyHwPjkq5m6WcCmNmFaIaybFXx+2vgsqSRNOOpAGa2GHhY4lIpAnha0qkkA4kAZuZO0k9FPFag2yHJHYR1Iw3gO7CsgiCKmPwMdEmajBuZBmBmbuMcLOKpQt1BSUdTAczMVZmQmjwtpTmC3xqo0ybpw5ROXQbMrA+45GtQUmYVy7JlZpYl0/B73YZuBAjqbWYI4KWkzWkZeBVSNuMAZua1FBorSY4MTEpangYQlM4EgOdZy6ExazkAiNtoXELvgLasIGr0sT0QZaAVAO8ltadlYBTYNcsB7kjanQZwHjg2ywGaViHXIruN7DVmYA+4lnudpC+JGXBfhlwTZwDAPQi4s6o2kloJ9yzyyKcXajGA64F6JL1tChBlwdX0oIrSgirUK+l+49pudh/IhGhhBvolDSRtzKa9jJktBdxrWk+icvXnwO3oIexFWlXJbMbMbAGwJQWg1o0WWEKpLUjSBcZ7CXnV0ZhQXoBQP/MAUzNgZu5Z8EbRGQT2S7qZ107mHmhmuIQnl2lXxFCQQgDRmTEGbAt1DIxJ2pFDr06lDIBFgDsdlwQE8wNol/Q7QCdRtDBAlIVO4FlAMJ2SMk96H3ulAEQQh4FBD6d9koY85LxESgOIIK67qtLE87CkUt+cSgWIICaAjQkQE5I2eU1rgFAVACsA9/Dk/qGcGv+ANZK+BsTmJVo6QJSFXuBeLIKdkh54RRQoVAlABHECOAOclHQ2MC5v8coAIojR+AuCd1QBgpUCBMSRW3QeIPfUlaT4H0/7RUAi2a/NAAAAAElFTkSuQmCC";
+    var html =
+      '<div id="' +
+      eleId +
+      '" style="width:25px;padding:10px 0px;text-align:center;background-color:#E5212E;position:fixed;top:250px;left:0px;color:#FFF;font-size:0px;z-index:9999999999999;cursor:pointer;margin:0px auto;text-align:center;">' +
+      '<img src="' +
+      iconVideo +
+      '" style="width:20px;">' +
+      "</div>";
+    $("body").append(html);
+    $("body").on("click", "#" + eleId, function () {
+      var video_url = window.location.href; //获取当前页面url
+      function clickBotton() {
+        window.open("https://y2mate.is/?url=" + video_url); //打开新页面
+      }
+    });
   }
-} )();
+})();
