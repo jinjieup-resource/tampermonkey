@@ -4,6 +4,7 @@
 // @version      0.1.0
 // @description  use y2mate.is to download youtube videos
 // @author       jinjieup-resource
+// @license      MIT
 // @match        https://www.youtube.com/watch?v=*
 // @match        https://*.y2mate.is/*
 // @require      https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js
