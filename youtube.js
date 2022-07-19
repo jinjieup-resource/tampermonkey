@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         youtube downloader (use y2mate)
 // @namespace    https://github.com/jinjieup-resource/tempermonkey
-// @version      0.1.0
+// @version      0.1.1
 // @description  use y2mate.is to download youtube videos
 // @author       jinjieup-resource
 // @license      MIT
