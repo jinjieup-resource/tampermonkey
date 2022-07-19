@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         youtube-helper
 // @namespace    youtube-helper
-// @version      0.1.3
+// @version      0.1.4
 // @description  use y2mate.is to download youtube videos
 // @author       jinjieup-resource
 // @license      MIT
