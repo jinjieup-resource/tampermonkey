@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         remind_me_vagrant_update
+// @name         youtube downloader (use y2mate)
 // @namespace    https://github.com/jinjieup-resource/tempermonkey
 // @version      0.1.0
 // @description  use y2mate.is to download youtube videos
@@ -33,7 +33,7 @@
     var video_id = window.location.href.split("watch?v=")[1]; //获取视频id
     var video_url = "https://www.youtube.com/watch?v=" + video_id; //视频链接
     function clickBotton(){
-      window.open("https://y2mate.is/", "_blank");
+      window.open("https://y2mate.is/", "_blank"); //新窗口打开y2mate.is
       setTimeout(function(){
         var input = document.querySelector("#txtUrl"); //获取输入框
         input.value = video_url; //输入视频链接
