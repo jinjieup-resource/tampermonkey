@@ -6,8 +6,8 @@
 // @author       jinjieup-resource
 // @license      MIT
 // @match        https://www.youtube.com/watch?v=*
-// @updateURL    https://raw.githubusercontent.com/jinjieup-resource/tempermonkey/main/youtube-downloader.user.js
-// @downloadURL  https://raw.githubusercontent.com/jinjieup-resource/tempermonkey/main/youtube-downloader.user.js
+// @updateURL    https://raw.githubusercontent.com/jinjieup-resource/tempermonkey/main/youtube-helper.user.js
+// @downloadURL  https://raw.githubusercontent.com/jinjieup-resource/tempermonkey/main/youtube-helper.user.js
 // @grant        GM_openInTab
 // ==/UserScript==
 (function () {
