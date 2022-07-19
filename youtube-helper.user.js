@@ -5,7 +5,7 @@
 // @description  use y2mate.is to download youtube videos
 // @author       jinjieup-resource
 // @license      MIT
-// @match        https://www.youtube.com/watch?v=*
+// @match        https://www.youtube.com/*
 // @updateURL    https://raw.githubusercontent.com/jinjieup-resource/tempermonkey/main/youtube-helper.user.js
 // @downloadURL  https://raw.githubusercontent.com/jinjieup-resource/tempermonkey/main/youtube-helper.user.js
 // @grant        GM_openInTab
@@ -30,5 +30,8 @@
         GM_openInTab("https://y2mate.is/?url=" + window.location.href);
       }
     }
+  }
+  else {
+    return;
   }
 })();
